@@ -1,0 +1,22 @@
+pdb func_sig.py --sig=True --matchtype=matchall --configtype=sig --src=/home/qian/data/BGM/IR/db/chown.funcbody --dst=/home/qian/data/BGM/IR/test/chown.funcbody --configpath=/home/qian/svn/code_search/config
+
+python llvm_ir_parser.py --opseq_path=/home/qian/code_search/IR/seq/ --dug_path=/home/qian/code_search/IR/dug/ --target_path=/home/qian/data/BGM/IR/db/ --dot_path=/home/qian/code_search/mcsema-master/build/llvm-3.5/bin/callgraph.dot --exename="chown"
+
+pdb Context_based_match.py --configpath=/home/qian/svn/code_search/config --matchtype=matchall --start=0 --lenth=149
+
+opt -load /home/qian/code_search/mcsema-master/build/Hello0/libLLVMHello0.so -mem2reg -dce -die -dse -memcpyopt -loop-simplify -indvars  -constmerge -constprop -instcombine -hello0 < /home/qian/data/mcsema/base64_i386_o0_strip.idb.bc > /dev/null
+
+ pdb /home/qian/svn/code_search/LLVM_feature/llvm_ir_parser.py --dug_path=/home/qian/data/mcsema/IR/dug0 --target_path=/home/qian/data/BGM/IR/db/  --exename=base64_i386_o0_strip.idb.bc
+
+ -load /home/qian/code_search/mcsema-master/build/Hello/libLLVMPassname.so -mem2reg -dce -die -dse -memcpyopt -loop-simplify -indvars  -constmerge -constprop -instcombine -hello </home/qian/data/mcsema/basename_i386_o0_strip.idb.bc > /dev/null
+
+
+select distinct a.bname, a.fname, a.ea, b.ea, c.ea, d.ea from coreutil_i386_o0_gt a, coreutil_i386_o3_gt b, coreutil_i386_o0_strip_gt c, coreutil_i386_o3_strip_gt d where a.fname == b.fname and a.bname == b.bname and a.ea == c.ea and b.ea == d.ea;
+
+select distinct a.bname, a.fname, a.ea, b.ea, c.ea, d.ea, c.fname, d.fname from coreutil_i386_o0_gt a inner join coreutil_i386_o3_gt b on a.fname == b.fname and a.bname == b.bname inner join coreutil_i386_o0_strip_gt c on a.ea== c.ea inner join coreutil_i386_o3_strip_gt d on b.ea == d.ea;
+
+select a.bname, a.fname, a.o0_ea, a.o3_ea, b.fname from gt_g a, coreutil_i386_o0_strip_gt b where a.o0_ea == b.ea and a.bname == b.bname;
+
+ select a.bname, a.fname, a.o0_ea, a.o3_ea, b.fname from gt_g a, coreutil_i386_o0_strip_gt b, coreutil_i386_o3_strip_gt c where a.o0_ea == b.ea and a.bname == b.bname and c.bname == a.bname and a.03_ea == c.ea
+
+ (anonymous namespace)::X86DAGToDAGISel::runOnMachineFunction

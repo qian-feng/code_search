@@ -1,0 +1,49 @@
+srcname:= base64_i386_o0_strip
+srcdir:= /home/qian/code_search/crossarch/coreutil_i386_o0_strip_gt/
+dstname:= base64_i386_o3_strip
+dstdir:= /home/qian/code_search/crossarch/coreutil_i386_o3_strip_gt/
+depth:= 1
+type:= successors
+srcbname:= base64
+dstbname:= base64
+
+******
+
+srcname:= test_i386_o0_g
+srcdir:= /home/qian/data/motiving_example/test_i386_o0_gt/
+dstname:= test_i386_o3_g
+dstdir:= /home/qian/data/motiving_example/test_i386_o3_gt/
+depth:= 1
+type:= successors
+srcbname:= test
+dstbname:= test
+
+******
+
+srcname:= base64_i386_o0_strip
+srcdir:= /home/qian/code_search/crossarch/coreutil_i386_o0_strip_gt/
+dstname:= base64_i386_o3_strip
+dstdir:= /home/qian/code_search/crossarch/coreutil_i386_o3_strip_gt/
+depth:= 1
+type:= successors
+srcbname:= base64
+dstbname:= base64
+******
+
+
+
+
+****
+srcname:= basename_i386_o0_strip
+srcdir:= /home/qian/data/BGM/IR/db
+dstname:= basename_i386_o3_strip
+dstdir:= /home/qian/data/BGM/IR/test
+depth:= 1
+type:= successors
+srcbname:= basename
+dstbname:= basename
+
+
+
+
+
